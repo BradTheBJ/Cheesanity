@@ -15,6 +15,7 @@ set(SOURCES
         Scripts/main.cpp
         Scripts/board.cpp
         Scripts/Letters.cpp
+        Scripts/pawn.cpp
         # add other cpp files here
 )
 
