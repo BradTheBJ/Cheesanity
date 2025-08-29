@@ -14,6 +14,7 @@ find_package(SFML 2.6 COMPONENTS graphics window system REQUIRED)
 set(SOURCES
         Scripts/main.cpp
         Scripts/board.cpp
+        Scripts/Letters.cpp
         # add other cpp files here
 )
 

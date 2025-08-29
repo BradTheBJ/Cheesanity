@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "board.h"
+#include "letters.h"
 using namespace sf;
 
 int main() {
@@ -14,6 +15,7 @@ int main() {
 
         window.clear();
         createBoard(window); // texture handled inside board.cpp
+        createNotation(window);
         window.display();
     }
 }

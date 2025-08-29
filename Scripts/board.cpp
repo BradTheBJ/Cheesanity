@@ -10,7 +10,7 @@ float squareHeight = 100.f;
 void createBoard(RenderWindow &window) {
     RectangleShape square(Vector2f(squareWidth, squareHeight));
     square.setOutlineThickness(3.f);       // 3-pixel outline
-    square.setOutlineColor(Color::Black);  // outline color
+    square.setOutlineColor(Color::Black);
 
     Color lightSquare(240, 217, 181); // light cream
     Color darkSquare(181, 136, 99);   // light brown
