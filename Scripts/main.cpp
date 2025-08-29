@@ -1,16 +1,19 @@
 #include <SFML/Graphics.hpp>
 #include "board.h"
+using namespace sf;
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 800), "Cheesanity");
+    RenderWindow window(VideoMode(800, 800), "Cheesanity");
+
     while (window.isOpen()) {
-        sf::Event event;
+        Event event;
         while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
+            if (event.type == Event::Closed)
                 window.close();
         }
+
         window.clear();
-        createBoard(window);
+        createBoard(window); // texture handled inside board.cpp
         window.display();
     }
 }

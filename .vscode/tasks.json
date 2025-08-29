@@ -2,32 +2,23 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: g++ build project",
-            "command": "/usr/bin/g++",
+            "label": "Build with MSVC + SFML",
+            "type": "shell",
+            "command": "cl.exe",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${workspaceFolder}/Scripts/main.cpp",
-                "${workspaceFolder}/Scripts/board.cpp",
-                "${workspaceFolder}/Scripts/window.cpp",
-                "-o",
-                "${workspaceFolder}/Scripts/main",
-                "-lsfml-graphics",
-                "-lsfml-window",
-                "-lsfml-system"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/Scripts"
-            },
-            "problemMatcher": [
-                "$gcc"
+                "/EHsc",
+                "main.cpp",
+                "/I", "C:/Dev/SFML-2.6.1/include",
+                "/link",
+                "/LIBPATH:C:/Dev/SFML-2.6.1/lib",
+                "sfml-graphics.lib",
+                "sfml-window.lib",
+                "sfml-system.lib"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "Build project with SFML"
+            }
         }
     ]
 }
